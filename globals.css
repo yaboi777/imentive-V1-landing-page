@@ -1,0 +1,724 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML */
+html, body {
+  height: 100%;
+  background-color: #14163d !important;
+  font-family:'Times New Roman', Times, serif;
+  font-size: small;
+}
+
+/* Navbar Styles */
+.me-auto {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  min-width: 750px;
+  max-width: 1200px;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: semi-bold;
+}
+
+.navbar a:hover {
+  color: #8b1097;
+}
+
+/* Dropdown Styles */
+.dropdown-toggle {
+  background-color: #000000 !important;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #38055a !important;
+}
+
+.dropdown-menu {
+  background-color: #510349;
+  border: 1px solid #f002dc;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-item:hover {
+  background-color: #6a12a4;
+  color: #8b1097;
+}
+
+/* Banner Section */
+.banner {
+  height: 500px;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Buttons */
+.btn-rounded {
+  width: 150px;
+  background-color: #6a12a4e7;
+  justify-content: justify;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.btn-rounded:hover {
+  background-color: #38055a;
+  color: #8b1097;
+}
+
+.small-btn {
+  width: 150px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  justify-content: justify;
+  text-align: center;
+  background-color: #6a12a4e7;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.small-btn:hover {
+  background-color: #38055a;
+  color: #8b1097;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  color: #dddddd;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Adjust button container for smaller gap */
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px; /* Reduced gap between buttons */
+  margin-top: 10px;
+}
+
+.about {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stacks text and image for small screens */
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  max-width: 1200px;
+}
+
+.about-text {
+  max-width: 100%;
+  text-align: justify;
+}
+
+.about-image {
+  width: 60%;
+  margin: 20px 0; /* Adds margin to space between image and text for smaller screens */
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .about-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+    order: 1; /* Ensure text is on the left */
+  }
+
+  .about-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+    order: 2; /* Ensure image is on the right */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.about-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Emotion Section */
+.emotion {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack content vertically */
+  padding: 20px;
+}
+
+.emotion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack content vertically */
+  width: 60%;
+  max-width: 1200px;
+}
+
+.emotion-text {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 30px; /* Add space between the text and the cards */
+}
+
+/* Card Section (Now positioned below the emotion-text) */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #101124 !important;
+  color: #ffffff !important;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  align-items: center; /* Center items within the card */
+  text-align: center;
+  flex: 1 1 30%;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.card img {
+  width: 78px;
+  height: 79px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.card p {
+  color: #ffffff;
+}
+
+/* Editor Section */
+.editor {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.editor-content {
+  display: flex;
+  flex-direction: column; /* Stacks text and image for small screens */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.editor-text {
+  max-width: 100%;
+  text-align: justify;
+}
+
+.editor-image {
+  width: 100%;
+  margin: 20px 0; /* Adds margin to space between image and text for smaller screens */
+}
+
+@media (min-width: 768px) {
+  .editor-content {
+    flex-direction: row; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .editor-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+    order: 1; /* Ensure text is on the left */
+  }
+
+  .editor-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+    order: 2; /* Ensure image is on the right */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.editor-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Analysis Section */
+.analysis-content {
+  display: flex;
+  color: #ffffff;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.analysis-text {
+  max-width: 100%;
+  text-align: justify;
+}
+
+.analysis-image {
+  width: 100%;
+}
+
+
+@media (max-width: 767.98px) { /* For smaller screens */
+  .analysis-content {
+    flex-direction: column; /* Stacks elements */
+  }
+
+  .analysis-text {
+    justify-content: center;
+    margin-top: 20px; /* Adds margin between image and text on smaller screens */
+  }
+}
+
+@media (min-width: 768px) { /* For larger screens */
+  .analysis-content {
+    flex-direction: row; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .analysis-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+  }
+
+  .analysis-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.analysis-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+@media (max-width: 767.98px) { /* For smaller screens */
+  .analysis-content {
+    flex-direction: column; /* Stacks elements */
+  }
+
+  .analysis-text {
+    margin-top: 20px; /* Adds margin between image and text on smaller screens */
+  }
+}
+
+@media (min-width: 768px) { /* For larger screens */
+  .analysis-content {
+    flex-direction: row-reverse; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .analysis-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+  }
+
+  .analysis-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.analysis-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Editing Section */
+.editing {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.editing-content {
+  display: flex;
+  flex-direction: column; /* Stacks text and image for small screens */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.editing-text {
+  max-width: 100%;
+  text-align: justify;
+}
+
+.editing-image {
+  width: 100%;
+  margin: 20px 0; /* Adds margin to space between image and text for smaller screens */
+}
+
+@media (min-width: 768px) {
+  .editing-content {
+    flex-direction: row; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .editing-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+    order: 1; /* Ensure text is on the left */
+  }
+
+  .editing-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+    order: 2; /* Ensure image is on the right */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.editng-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+/* Data Section */
+.data-content {
+  display: flex;
+  color: #ffffff;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+}
+
+.data-text {
+  max-width: 100%;
+  text-align: justify;
+}
+
+.data-image {
+  width: 100%;
+  margin: 20px 0; /* Adds margin to space between image and text for smaller screens */
+}
+
+@media (max-width: 767.98px) { /* For smaller screens */
+  .data-content {
+    flex-direction: column; /* Stacks elements */
+  }
+
+  .data-text {
+    margin-top: 20px; /* Adds margin between image and text on smaller screens */
+  }
+}
+
+@media (min-width: 768px) { /* For larger screens */
+  .data-content {
+    flex-direction: row; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .data-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+  }
+
+  .data-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.data-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+@media (max-width: 767.98px) { /* For smaller screens */
+  .data-content {
+    flex-direction: column; /* Stacks elements */
+  }
+
+  .data-text {
+    margin-top: 20px; /* Adds margin between image and text on smaller screens */
+  }
+}
+
+@media (min-width: 768px) { /* For larger screens */
+  .data-content {
+    flex-direction: row-reverse; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+  }
+
+  .data-text {
+    width: 50%; /* Text takes half the width */
+    padding-right: 20px; /* Space between text and image */
+  }
+
+  .data-image {
+    width: 50%; /* Image takes half the width */
+    padding-left: 20px; /* Space between image and text */
+  }
+}
+
+/* Ensure the image maintains its responsiveness */
+.data-image img {
+  width: 100%; /* Full width for responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Rounded Form Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Makes form fields rounded */
+  background-color: #101124;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #8b1097; /* Border color on focus */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .me-auto {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-btn, .btn-rounded {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  /* Card responsive styles */
+  .card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%; /* Ensure the card takes up full width */
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #101124;
+  padding: 40px 20px;
+  color: white;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: flex-start; /* Align items at the top */
+}
+
+.footer h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading text */
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the list items */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items in the column */
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  text-align: center; /* Center text for each link */
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #8b1097;
+}
+
+/* Adjusting the form container */
+.footer-form {
+  margin-left: auto; /* Push the form to the far right */
+  display: flex; /* Keep the form elements aligned */
+  flex-direction: column; /* Stack form elements vertically */
+  border-radius: 25px;
+  align-items: flex-end; /* Align items to the right */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center; /* Center footer bottom text */
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #888888;
+}
+
+.footer-divider {
+  border: none; /* Remove the default border */
+  height: 2px; /* Set the height of the line */
+  background-color: #888888 !important; /* Use the same color as the footer */
+  margin: 20px 0; /* Add spacing above and below the line */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .footer ul {
+    padding-left: 0;
+    justify-content: center; /* Center the links on smaller screens */
+  }
+
+  .footer ul li {
+    margin-bottom: 15px;
+  }
+
+  .footer-form {
+    margin-left: 0; /* Reset margin for smaller screens */
+    margin-top: 20px; /* Add some space above the form */
+  }
+}
+
+/* Fixed welcome image on the right side */
+.welcome-image {
+  position: fixed; /* Fix the image position */
+  top: 20%; /* Keep this value as per your design */
+  right: 5%; /* Use a percentage to keep it responsive */
+  width: 200px; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 998; /* Ensure it's above other elements */
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .welcome-image {
+    position: absolute !important; /* Switch to absolute positioning */
+    left: 50% !important; /* Center horizontally */
+    top: 10% !important; /* Adjust top position */
+    transform: translateX(-50%) !important; /* Ensure it's horizontally centered */
+    width: 150px !important; /* Optionally adjust the size */
+    right: auto !important; /* Reset right position */
+  }
+}
+
+
