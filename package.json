@@ -1,0 +1,31 @@
+{
+  "name": "testing-next3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@types/node": "22.5.5",
+    "@types/react": "18.3.6",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "bootstrap": "^5.3.3",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.11",
+    "next": "14.2.11",
+    "postcss": "8.4.47",
+    "react": "18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "18.3.1",
+    "tailwindcss": "3.4.11",
+    "typescript": "5.6.2"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10"
+  }
+}
